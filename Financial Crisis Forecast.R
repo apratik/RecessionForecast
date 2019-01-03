@@ -34,7 +34,7 @@ data.Set <- NULL
 j <- 1
 for (i in tickets){
   data.Set <- cbind(data.Set, Quandl(i, 
-                                     api_key = "XmUxzF3JX87XEBTyxNR9", 
+                                     api_key = "YOUR QUANDL API KEY", 
                                      type = "xts", 
                                      collapse = "daily"))
   print(paste("Descargando: ", nombres.Tickets[j], sep = "")) 
@@ -229,7 +229,7 @@ Test.Set <- as.data.frame(scale(Test.Set))
 
 prob_pred = predict(classifier, 
                     type = 'response', 
-                    newdata = Test.Set) # Predicción
+                    newdata = Test.Set) # PredicciÃ³n
 
 total.Probabilidades <- c(prob, prob_pred)
 
@@ -249,7 +249,7 @@ for(i in 1:nrow(BBDD.Prob)){
 }
 
 # Graficamos los resultados de la Prediccion
-  # Buscamos el máximo valor futuro
+  # Buscamos el mÃ¡ximo valor futuro
   fila.proyeccion <- nrow(BBDD.Prob) - periodos.Proyectar
   fila.final      <- nrow(BBDD.Prob)
   
