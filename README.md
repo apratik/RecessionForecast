@@ -2,7 +2,7 @@
 This is a script developed in R-Studio to forecast the odds of a recession in USA.
 
 # How does it function
-You don't need to input any variable. It's all code it for you. 
+You don't need to input any variable. It's all code it for you. Well, you just need your QUANDL API KEY.
 
 The software will download the information related with the PMI, 10-year treasury bond yield, 3-month treasury bond yield, unemployment rate and known crisis periods in order to feed the logistic regression model to forecast the odds of a recession in United States. 
 
