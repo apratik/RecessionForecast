@@ -33,7 +33,7 @@ data.Set <- NULL
 j <- 1
 for (i in tickets){
   data.Set <- cbind(data.Set, Quandl(i, 
-                                     api_key = "TYPE YOUR QUANDL KEY HERE", 
+                                     api_key = "Type your Quandl Key HERE", 
                                      type = "xts", 
                                      collapse = "daily"))
   print(paste("Descargando: ", nombres.Tickets[j], sep = "")) 
@@ -264,7 +264,7 @@ p <- ggplot(data = BBDD.Prob, aes(x = Fechas, y = Prob)) +
             fill = 'lightblue', alpha = 0.4) +
   theme_minimal() +
   labs(x = "", y = "", title = "Probability of a Recession in the United States",
-       subtitle = paste("The odds of a recession during the next ", periodos.Forecast, " month(s) is close to ", round(maximo*100, digits = 2), "%", sep = ""),
+       subtitle = paste("The odds of a recession during the next ", periodos.Forecast, " month(s) is close to ", round(maximo*100, digits = 2), "% - Start date of the recession: ", fecha.Recesion, sep = ""),
        caption = "Created by: Carlos Jimenez (@cjimenezdiaz). \nThe variables analyzed in this study are: PMI, the Slope of the Yield Curve and the Unemployment Rate") +
   geom_hline(yintercept = 0,color = "black") +
   theme(plot.caption = element_text(hjust = 0),
